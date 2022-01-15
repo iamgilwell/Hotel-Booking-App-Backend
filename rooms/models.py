@@ -26,6 +26,7 @@ class Rooms(models.Model):
     room_number = models.TextField(blank=True,null=True)
     services = models.ManyToManyField(Service,blank=True, null=True)
     price = models.CharField(max_length=150,blank=True, null=True)
+    thumbnail = models.ImageField(upload_to="rooms_thumbnail", blank=True, null=True)
     active = models.CharField(max_length=20, choices=STATUS, default='Inactive')
     created_date = models.DateTimeField(auto_now=True)
     update_date  = models.DateTimeField(auto_now_add=True)
