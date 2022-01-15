@@ -13,5 +13,5 @@ class RoomList(APIView):
 class RoomDetails(APIView):
     def get(self,request,pk):
         room =  get_list_or_404(Rooms, pk=pk)
-        data = RoomsSerializer(room).data
+        data = RoomsSerializer(room,many=True).data
         return Response(data)

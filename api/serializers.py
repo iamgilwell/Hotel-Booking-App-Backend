@@ -21,4 +21,4 @@ class RoomsSerializer(serializers.ModelSerializer):
     services = ServicesSerializer(many=True)
     class Meta:
         model = Rooms
-        fields = '__all__'
+        fields = ['name','check_in_date','check_out_date','number_of_guests','room_number','services','price','active']

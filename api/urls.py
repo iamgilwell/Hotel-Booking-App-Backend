@@ -13,5 +13,5 @@ urlpatterns = [
     # path('', include(router.urls)),
     # path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
     path("", RoomList.as_view(), name="room-list"),
-    path("polls/<int:pk>/", RoomDetails.as_view(),name="room-details")
+    path("room-details/<int:pk>/", RoomDetails.as_view(),name="room-details")
 ]
